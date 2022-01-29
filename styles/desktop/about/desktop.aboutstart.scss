@@ -1,0 +1,151 @@
+@media only screen and (min-width: $desktop) {
+    .aboutstart {
+        min-height: 50rem;
+        background-color: $bodygreen;
+        font-family: $raleway;
+        color: $abouttextc;
+        overflow: hidden;
+
+        .aboutstart__container {
+            position: relative;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 1fr 40rem;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+            }
+
+            &::before {
+                z-index: 2;
+                height: 18.7rem;
+                background-color: #fff;
+                right: 37rem;
+                top: 4rem;
+            }
+
+            &::after {
+                z-index: 1;
+                background-color: $bodygreen;
+                right: 37rem;
+                height: 18.7rem;
+                top: 4rem;
+                transition: all 500ms linear;
+                transition-delay: 500ms;
+            }
+
+            &.appear::after {
+                right: 36.3rem;
+                height: 19.7rem;
+                top: 3.5rem;
+            }
+
+            .aboutstart__item1 {
+                z-index: 3;
+                position: relative;
+                padding: 7em 5rem;
+
+                h2 {
+                    font-weight: normal;
+                    font-size: 3rem;
+                    max-width: 35rem;
+                }
+
+                p {
+                    margin-top: 1rem;
+                    max-width: 35rem;
+                }
+
+                h4 {
+                    margin-top: 5rem;
+                    max-width: 20ch;
+                }
+
+                h2,
+                p {
+                    transform: translateX(-100%);
+                    opacity: 0;
+                    transition: all 500ms linear;
+                }
+
+                &.appear {
+                    h2,
+                    p {
+                        transform: translateX(0);
+                        opacity: 1;
+                    }
+                }
+            }
+
+            .aboutstart__item2 {
+                display: flex;
+                justify-content: flex-end;
+
+                .aboutstart__img__container {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+
+                    img {
+                        width: 40rem;
+                    }
+
+                    .aboutstart__decoration {
+                        position: absolute;
+                        background-color: #c4c4c47e;
+                        backdrop-filter: blur(3px);
+                        left: 0;
+                        bottom: 0;
+                        top: 0;
+                        right: 50%;
+                    }
+
+                    .aboutstart__list__container {
+                        ul {
+                            position: absolute;
+                            left: 5px;
+                            bottom: 1rem;
+                            color: white;
+                        }
+
+                        li {
+                            position: relative;
+                            margin-top: 5rem;
+                            list-style: none;
+                            font-size: 1.5rem;
+
+                            &::before {
+                                content: "4";
+                                position: absolute;
+                                left: -4rem;
+                                font-size: 4rem;
+                                color: $abouttextc;
+                                bottom: -10px;
+                                font-family: sans-serif;
+                            }
+
+                            &:nth-of-type(2)::before {
+                                content: "39";
+                                left: -6.4rem;
+                            }
+
+                            &:nth-of-type(3)::before {
+                                content: "130";
+                                left: -8.6rem;
+                            }
+
+                            &:nth-of-type(4)::before {
+                                content: "250+";
+                                left: -11rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

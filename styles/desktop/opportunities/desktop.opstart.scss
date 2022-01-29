@@ -1,0 +1,126 @@
+@media only screen and (min-width: $desktop) {
+    .opstart {
+        position: relative;
+        z-index: -2;
+        background-color: $bodygreen;
+        padding: 5em 0;
+        overflow: hidden;
+
+        .opstart__container {
+            position: relative;
+            align-items: center;
+            transition: all 500ms linear;
+            transform: translateX(-50%);
+            opacity: 0;
+
+            &::before {
+                content: "";
+                z-index: 2;
+                position: absolute;
+                border-radius: 500px;
+                width: 320px;
+                aspect-ratio: 1 / 1;
+                transform: translateY(-50%);
+                top: 50%;
+                right: 17%;
+                transition: all 500ms linear;
+                transition-delay: 500ms;
+
+                background: url("/svg/bigBill.svg");
+                background-color: $bodygreen;
+                background-size: cover;
+                box-shadow: 0px 0px 0px 0px $bodygreen;
+            }
+
+            &.appear {
+                transform: translateX(0);
+                opacity: 1;
+            }
+
+            &.appear::before {
+                box-shadow: 0px 0px 0px 30px $bodygreen;
+            }
+
+            &::after {
+                z-index: -1;
+                content: "";
+                width: 70%;
+                height: 100%;
+                display: block;
+                position: absolute;
+                background-color: $opstartextbc;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                // transform: ;
+            }
+
+            .opstart__content__container {
+                width: 55%;
+                padding-left: 5rem;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(2, 1fr);
+                font-family: $raleway;
+                color: $whytextcolor;
+
+                .opstart__item1,
+                .opstart__item2 {
+                    margin: 2rem 0;
+
+                    h2,
+                    h4 {
+                        z-index: 2;
+                        margin-bottom: 0.5rem;
+                    }
+
+                    h2 {
+                        font-size: 2.5rem;
+                    }
+
+                    h4 {
+                        font-size: 1.3rem;
+                    }
+
+                    h4,
+                    p {
+                        max-width: 45rem;
+                    }
+                }
+
+                .opstart__item1::after {
+                    content: "";
+                    position: absolute;
+                    // width: 60%;
+                    height: 20px;
+                    left: 0;
+                    top: 50%;
+                    right: 30rem;
+                    transform: translateY(-50%);
+                    background-color: $bodygreen;
+                    z-index: 1;
+                }
+            }
+
+            .opstart__img__container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .opstart__img__inner {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 440px;
+                    aspect-ratio: 1 / 1;
+                    background-color: $bodygreen;
+                    border-radius: 500px;
+
+                    img {
+                        max-width: 380px;
+                    }
+                }
+            }
+        }
+    }
+}

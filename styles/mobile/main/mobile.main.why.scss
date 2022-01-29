@@ -1,0 +1,102 @@
+@media only screen and (max-width: $mobile) {
+    .mainwhy {
+        position: relative;
+        background-color: $bodygreen;
+        font-family: $raleway;
+        color: $whytextcolor;
+        padding: 2em 0;
+
+        h1 {
+            font-size: 2.3rem;
+            font-weight: 700;
+            text-align: center;
+
+            strong {
+                font-weight: 900;
+            }
+        }
+
+        .main__why__container {
+            position: relative;
+            padding: 0 2em;
+            margin-top: 3em;
+
+            &::before {
+                z-index: 1;
+                position: absolute;
+                content: "";
+                width: 70%;
+                height: 94%;
+                left: 0;
+                top: -1rem;
+                background-color: $whyheadlinebc;
+            }
+
+            .main__why__headline {
+                position: relative;
+                z-index: 2;
+
+                h2 {
+                    max-width: 12ch;
+                    font-size: 2.1em;
+                }
+            }
+
+            .main__why__inner__wrapper {
+                position: relative;
+                z-index: 2;
+                padding: 2em 0;
+
+                .main__why__inner__container {
+                    margin-bottom: 3em;
+                    display: flex;
+                    align-items: center;
+
+                    h3 {
+                        font-size: 1.5em;
+                        margin-bottom: 0.5em;
+                    }
+
+                    p {
+                        font-size: 1.1rem;
+                        max-width: 50ch;
+                        font-weight: 300;
+                    }
+
+                    svg {
+                        margin-right: 15px;
+                        width: 90px;
+                        height: 90px;
+                    }
+                }
+
+                .main__why__inner__link {
+                    grid-column: 2;
+                    display: flex;
+                    align-items: center;
+                    font-size: 1.1rem;
+
+                    span {
+                        cursor: pointer;
+                        font-weight: 700;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        &:hover img {
+                            transform: translateX(5px);
+                        }
+                    }
+
+                    span img {
+                        margin-left: 3px;
+                        padding-bottom: 2px;
+                        width: 11px;
+                        height: auto;
+                        transition: all 100ms linear;
+                    }
+                }
+            }
+        }
+    }
+}

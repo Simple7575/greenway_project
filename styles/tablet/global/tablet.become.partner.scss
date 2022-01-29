@@ -1,0 +1,183 @@
+@media only screen and (min-width: $tabletstart) and (max-width: $tabletend) {
+    .become__partner {
+        position: fixed;
+        z-index: 1001;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0.315);
+        backdrop-filter: blur(3px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform-origin: top;
+        transition: all 200ms linear;
+
+        transform: scaleY(0);
+
+        &.open {
+            transform: scaleY(1);
+        }
+
+        font-family: $raleway;
+        color: $navlinks;
+
+        .become__partner__container {
+            position: relative;
+            z-index: 1002;
+            max-width: 90%;
+            height: 90%;
+            background-color: $darkgreen;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h2 {
+                text-align: center;
+                text-align: center;
+                font-size: 3rem;
+                max-width: 20ch;
+
+                strong {
+                    font-weight: bolder;
+                }
+            }
+
+            .become__partner__inner {
+                height: 100%;
+                display: grid;
+                row-gap: 3rem;
+
+                .become__partner__content,
+                .become__partner__form__container {
+                    padding: 0em 5em;
+                }
+
+                .become__partner__content {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    h3 {
+                        font-size: 2.5rem;
+                        font-weight: 800;
+                    }
+
+                    p {
+                        margin-top: 1em;
+                        font-size: 1.3rem;
+
+                        &:nth-last-of-type(1) {
+                            color: white;
+                        }
+                    }
+                }
+
+                .become__partner__form__container {
+                    display: flex;
+                    justify-content: center;
+
+                    form {
+                        height: max-content;
+                        position: relative;
+                        color: #4e4e4e;
+                        padding: 2.8rem 3rem;
+                        border-radius: 13px;
+                        background-color: #dadada;
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+
+                        &::before {
+                            position: absolute;
+                            content: "";
+                            width: 130%;
+                            height: 5px;
+                            background-color: $navlinks;
+                            border-radius: 5px;
+
+                            left: 50%;
+                            transform: translateX(-50%);
+                            top: -2rem;
+                        }
+                    }
+
+                    .become__partner__form__name,
+                    .become__partner__form__secondname,
+                    .become__partner__form__number,
+                    .become__partner__form__email {
+                        display: flex;
+                        flex-direction: column;
+
+                        input {
+                            background-color: $inputsbc;
+                            border: none;
+                            border-radius: 5px;
+                            height: 2.3em;
+
+                            &:focus {
+                                outline: none;
+                                background-color: #50505063;
+                            }
+                        }
+                    }
+
+                    .become__partner__form__secondname,
+                    .become__partner__form__email {
+                        margin-left: 1rem;
+                    }
+
+                    .become__partner__form__number,
+                    .become__partner__form__email {
+                        margin-top: 0.5rem;
+                    }
+
+                    .become__partner__form__button {
+                        grid-column: 1 / 3;
+                        display: flex;
+                        justify-content: flex-end;
+
+                        button {
+                            margin-top: 1rem;
+                            border: none;
+                            border-radius: 50px;
+                            background-color: $buttoncolor;
+                            width: 10em;
+                            height: 3em;
+                            cursor: pointer;
+                            transition: all 100ms linear;
+
+                            &:hover {
+                                color: white;
+                                background-color: $buttonhover;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .become__partner__close {
+            position: absolute;
+            right: 15px;
+            top: 10px;
+            cursor: pointer;
+
+            svg {
+                width: 40px;
+                transition: all 100ms linear;
+
+                path {
+                    fill: $navlinks;
+                }
+            }
+
+            &:hover svg {
+                path {
+                    fill: rgb(255, 255, 255);
+                }
+            }
+        }
+    }
+}

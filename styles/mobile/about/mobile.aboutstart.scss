@@ -1,0 +1,105 @@
+@media only screen and (max-width: $mobile) {
+    .aboutstart {
+        background-color: $opstartextbc;
+        font-family: $raleway;
+        color: $abouttextc;
+
+        .aboutstart__container {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr;
+
+            .aboutstart__item1 {
+                z-index: 3;
+                position: relative;
+                padding: 1em 2rem;
+
+                h2 {
+                    font-weight: normal;
+                    font-size: 2rem;
+                    max-width: 35rem;
+                }
+
+                p {
+                    margin-top: 1rem;
+                    max-width: 35rem;
+                    font-family: sans-serif;
+                }
+
+                h4 {
+                    position: absolute;
+                    margin-top: 2rem;
+                    max-width: 15ch;
+                    right: 2em;
+                }
+            }
+
+            .aboutstart__item2 {
+                display: flex;
+                justify-content: flex-end;
+
+                .aboutstart__img__container {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+
+                    img {
+                        width: 100%;
+                    }
+
+                    .aboutstart__decoration {
+                        position: absolute;
+                        background-color: #c4c4c47e;
+                        backdrop-filter: blur(3px);
+                        left: 0;
+                        bottom: 0;
+                        top: 0;
+                        right: 52%;
+                    }
+
+                    .aboutstart__list__container {
+                        ul {
+                            position: absolute;
+                            left: 50%;
+                            bottom: 1rem;
+                            color: white;
+                        }
+
+                        li {
+                            position: relative;
+                            margin-top: 5rem;
+                            list-style: none;
+                            font-size: 1.3rem;
+
+                            &::before {
+                                content: "4";
+                                position: absolute;
+                                left: -4rem;
+                                font-size: 4rem;
+                                color: $abouttextc;
+                                bottom: -10px;
+                                font-family: sans-serif;
+                            }
+
+                            &:nth-of-type(2)::before {
+                                content: "39";
+                                left: -6.4rem;
+                            }
+
+                            &:nth-of-type(3)::before {
+                                content: "130";
+                                left: -8.6rem;
+                            }
+
+                            &:nth-of-type(4)::before {
+                                content: "250+";
+                                left: -11rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

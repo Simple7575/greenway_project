@@ -1,0 +1,77 @@
+@media only screen and (max-width: $mobile) {
+    .abouteco {
+        .abouteco__container {
+            .abouteco__headline {
+                padding: 2em 2em;
+                font-family: $raleway;
+                color: $abouttextc;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: #eae9e9;
+
+                h2 {
+                    font-size: 2.3rem;
+                }
+
+                h4 {
+                    max-width: 35rem;
+                }
+            }
+
+            .abouteco__img__content__container {
+                min-height: 40rem;
+                position: relative;
+
+                .abouteco__img {
+                    z-index: -1;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background: url(/img/aboutpg/ali-abdul-rahman-Xva-TYqwHhA-unsplash.jpg);
+                    background-size: cover;
+                    // background-position-y: -45rem;
+                    background-repeat: no-repeat;
+                }
+
+                .abouteco__content__container {
+                    padding: 3em 2em;
+
+                    background: linear-gradient(
+                        0deg,
+                        rgba(129, 129, 129, 0) 41%,
+                        rgb(204, 252, 248) 100%
+                    );
+                    min-height: 40rem;
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    row-gap: 2rem;
+                    color: $abouttextc;
+                    font-family: $raleway;
+
+                    .abouteco__content__item1,
+                    .abouteco__content__item2,
+                    .abouteco__content__item3,
+                    .abouteco__content__item4 {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    h3 {
+                        font-size: 2.5rem;
+                        font-weight: normal;
+                    }
+
+                    p {
+                        margin-top: 1rem;
+                        max-width: 45ch;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,128 @@
+@media only screen and (max-width: $mobile) {
+    .mainhero {
+        margin-top: 4rem;
+        height: calc(100vh - 4rem);
+
+        .hero__wrapper {
+            height: 100%;
+
+            .hero__img {
+                position: absolute;
+                z-index: -10;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 100vh;
+                background: url("../../../public/img/mainpg/lawrence-kayku-ZVKr8wADhpc-unsplash.jpg");
+                background-size: cover;
+            }
+
+            .hero__inner__wrapper {
+                height: 100%;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(2, 1fr);
+
+                .hero__content__contacts__wrapper {
+                    height: 100%;
+                    order: 2;
+
+                    .hero__content__contacts__inner {
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+
+                        .hero__contacts {
+                            order: 2;
+                            margin-top: auto;
+
+                            padding: 10px 20px;
+                            background-color: $herocontactsbc;
+                            backdrop-filter: blur(2px);
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+
+                            .hero__contacts__icons {
+                                a img {
+                                    margin: 0 0.3em;
+                                    width: 1.7em;
+                                    transition: all 100ms linear;
+
+                                    &:hover {
+                                        transform: scale(1.1);
+                                        filter: drop-shadow(
+                                            -3px 5px 0px rgb(114, 114, 114)
+                                        );
+                                    }
+                                }
+                            }
+
+                            .hero__contacts__number {
+                                a {
+                                    margin: 0 0.3em;
+                                    font-size: 0.9em;
+                                    text-decoration: none;
+                                    color: $navlinks;
+
+                                    &:hover {
+                                        color: $navlinkshover;
+                                    }
+                                }
+                            }
+                        }
+
+                        .hero__content {
+                            padding: 0 2em;
+                            font-family: $raleway;
+
+                            h2 {
+                                font-weight: 200;
+                                color: white;
+                                font-size: 2.3rem;
+                                line-height: 0.9em;
+                                margin-bottom: 0.5em;
+                            }
+
+                            p {
+                                color: white;
+                                max-width: 45ch;
+                            }
+
+                            button {
+                                align-self: flex-start;
+                                border: none;
+                                border-radius: 50px;
+                                margin-top: 3em;
+                                background-color: $buttoncolor;
+                                width: 10em;
+                                height: 3em;
+                                cursor: pointer;
+                                transition: all 100ms linear;
+
+                                &:hover {
+                                    color: white;
+                                    background-color: $buttonhover;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .hero__logo {
+                    padding: 0 2em;
+                    display: flex;
+                    align-items: center;
+
+                    picture {
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

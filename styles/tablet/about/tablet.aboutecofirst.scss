@@ -1,0 +1,46 @@
+@media only screen and (min-width: $tabletstart) and (max-width: $tabletend) {
+    .aboutecofirst {
+        position: relative;
+        height: 40rem;
+        padding: 0 5em;
+
+        .aboutecofirst__img {
+            z-index: -1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("/img/aboutpg/dose-juice-sTPy-oeA3h0-unsplash.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .aboutecofirst__container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            width: 100%;
+            height: 100%;
+            font-family: $raleway;
+            color: #333333;
+
+            .aboutecofirst__content {
+                background-color: rgba(255, 255, 255, 0.322);
+                backdrop-filter: blur(5px);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 0 3rem;
+
+                h3 {
+                    font-weight: normal;
+                    font-size: 3rem;
+                }
+
+                p {
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+}

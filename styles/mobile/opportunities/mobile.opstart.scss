@@ -1,0 +1,135 @@
+@media only screen and (max-width: $mobile) {
+    .opstart {
+        position: relative;
+        z-index: -2;
+        background-color: $bodygreen;
+        padding: 0 0 3em 0;
+        overflow: hidden;
+
+        .opstart__container {
+            position: relative;
+            align-items: center;
+            background-color: $opstartextbc;
+            overflow: hidden;
+
+            &::before {
+                content: "";
+                z-index: 2;
+                position: absolute;
+                border-radius: 500px;
+                width: 300px;
+                aspect-ratio: 1 / 1;
+                transform: translate(100%, -50%);
+                opacity: 0;
+                top: 50%;
+                left: 50%;
+
+                background: url("/svg/bigBill.svg");
+                background-color: $bodygreen;
+                background-size: cover;
+                // box-shadow: 0px 0px 0px 20px $bodygreen;
+                transition: all 500ms cubic-bezier(0.24, 0.65, 1, 1.06);
+            }
+
+            &.appear::before {
+                opacity: 1;
+                transform: translate(-50%, -50%);
+            }
+
+            &::after {
+                z-index: 1;
+                content: "";
+                position: absolute;
+                border-radius: 500px;
+                width: 300px;
+                aspect-ratio: 1 / 1;
+                transform: translate(-50%, -50%);
+                top: 50%;
+                left: 50%;
+                box-shadow: 0px 0px 0px 0px $bodygreen;
+                background-color: $bodygreen;
+
+                transition: all 500ms linear;
+                transition-delay: 500ms;
+            }
+
+            &.appear::after {
+                box-shadow: 0px 0px 0px 20px $bodygreen;
+            }
+
+            .opstart__content__container {
+                width: 100%;
+                height: 100%;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(2, 1fr);
+                row-gap: 390px;
+                font-family: $raleway;
+                color: $whytextcolor;
+
+                .opstart__item1,
+                .opstart__item2 {
+                    padding: 2em 2em;
+                    background-color: $opstartextbc;
+
+                    h2,
+                    h4 {
+                        z-index: 2;
+                        margin-bottom: 0.5rem;
+                    }
+
+                    h2 {
+                        font-size: 2.5rem;
+                    }
+
+                    h4 {
+                        font-size: 1.3rem;
+                    }
+
+                    h4,
+                    p {
+                        max-width: 45rem;
+                    }
+                }
+
+                .opstart__item1::after {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 0px;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background-color: $bodygreen;
+                    z-index: 1;
+                    transition: all 500ms linear;
+                    transition-delay: 500ms;
+                }
+
+                .opstart__item1.appear::after {
+                    height: 10px;
+                }
+            }
+
+            .opstart__img__container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .opstart__img__inner {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 440px;
+                    aspect-ratio: 1 / 1;
+                    background-color: $bodygreen;
+                    border-radius: 500px;
+
+                    img {
+                        max-width: 380px;
+                    }
+                }
+            }
+        }
+    }
+}

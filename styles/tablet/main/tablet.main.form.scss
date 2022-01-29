@@ -1,0 +1,116 @@
+@media only screen and (min-width: $tabletstart) and (max-width: $tabletend) {
+    .main__message {
+        position: relative;
+        padding: 6em 5em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 720px;
+
+        .main__message__headline {
+            h2 {
+                font-family: $raleway;
+                font-weight: normal;
+                font-size: 2rem;
+                color: $formheadlinec;
+            }
+        }
+
+        .main__message__img {
+            z-index: -1;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: url("/img/mainpg/kate-macate-xmddEHyCisc-unsplash.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+        }
+
+        .main__message__form__wrapper {
+            margin-top: 8rem;
+
+            form {
+                font-family: $raleway;
+                color: #4e4e4e;
+                padding: 1.5rem 3rem;
+                border-radius: 13px;
+                background-color: $formbc;
+                backdrop-filter: blur(7px);
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+
+                .main__form__name,
+                .main__form__secondname,
+                .main__form__number,
+                .main__form__email {
+                    display: flex;
+                    flex-direction: column;
+
+                    input {
+                        background-color: $inputsbc;
+                        border: none;
+                        border-radius: 5px;
+                        height: 2.3em;
+
+                        &:focus {
+                            outline: none;
+                            background-color: #8a923e63;
+                        }
+                    }
+                }
+
+                .main__form__secondname,
+                .main__form__email {
+                    margin-left: 1rem;
+                }
+
+                .main__form__number,
+                .main__form__email {
+                    margin-top: 0.5rem;
+                }
+
+                .main__form__text {
+                    grid-column: 1 / 3;
+
+                    textarea {
+                        border: none;
+                        border-radius: 5px;
+                        background-color: $inputsbc;
+                        margin-top: 1rem;
+                        width: 100%;
+
+                        &:focus {
+                            outline: none;
+                            background-color: #8a923e63;
+                        }
+                    }
+                }
+
+                .main__form__button {
+                    grid-column: 1 / 3;
+                    display: flex;
+                    justify-content: flex-end;
+
+                    button {
+                        margin-top: 1rem;
+                        border: none;
+                        border-radius: 50px;
+                        background-color: $buttoncolor;
+                        width: 10em;
+                        height: 3em;
+                        cursor: pointer;
+                        transition: all 100ms linear;
+
+                        &:hover {
+                            color: white;
+                            background-color: $buttonhover;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

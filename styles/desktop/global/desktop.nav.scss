@@ -1,0 +1,109 @@
+@media only screen and (min-width: $desktop) {
+    #nav {
+        z-index: 100;
+        position: fixed;
+        height: 4rem;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: $darkgreen;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5em 3em;
+
+        a {
+            text-decoration: none;
+            color: $navlinks;
+            transition: all 100ms linear;
+
+            &:hover {
+                color: $navlinkshover;
+            }
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .logo {
+            text-shadow: -5px 6px 7px black;
+            transition: all 100ms linear;
+
+            a {
+                font-size: 2.5em;
+                font-family: "Great Vibes", cursive;
+            }
+
+            &:hover {
+                transform: translateX(10px) scale(1.1);
+                text-shadow: -5px 6px 10px black;
+            }
+        }
+
+        .nav__pages {
+            all: initial;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            a {
+                font-family: $raleway;
+                font-weight: bold;
+                margin: 0 1em;
+            }
+
+            button {
+                all: unset;
+                font-family: $raleway;
+                color: $navlinks;
+                font-weight: bold;
+                margin: 0 1em;
+
+                &:hover {
+                    color: $navlinkshover;
+                }
+            }
+        }
+
+        .become__partner__wrapper {
+            all: initial;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            button {
+                display: flex;
+                align-items: center;
+                background: transparent;
+                border: none;
+                cursor: pointer;
+                color: $navlinks;
+                font-weight: bolder;
+
+                &:hover {
+                    color: $navlinkshover;
+                }
+
+                &:hover img {
+                    transform: translateX(5px);
+                }
+
+                img {
+                    width: 11px;
+                    margin-left: 3px;
+                    transition: all 100ms linear;
+                }
+            }
+        }
+
+        .mobile__nav {
+            display: none;
+        }
+        .hamburger__wrapper {
+            display: none;
+        }
+    }
+}

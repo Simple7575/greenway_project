@@ -1,0 +1,97 @@
+@import "/styles/variables/variables.scss";
+@import "/styles/fonts.scss";
+
+// mobile global
+@import "/styles/mobile/global/mobile.nav.scss";
+@import "/styles/mobile/global/mobile.footer.scss";
+@import "/styles/mobile/global/mobile.become.partner.scss";
+
+// mobile main
+@import "/styles/mobile/main/mobile.main.hero.scss";
+@import "/styles/mobile/main/mobile.main.why.scss";
+@import "/styles/mobile/main/mobile.main.products.scss";
+@import "/styles/mobile/main/mobile.main.form.scss";
+
+// mobile op
+@import "/styles/mobile/opportunities/mobile.ophero.scss";
+@import "/styles/mobile/opportunities/mobile.opstart.scss";
+@import "/styles/mobile/opportunities/mobile.opsecond.scss";
+@import "/styles/mobile/opportunities/mobile.optravel.scss";
+@import "/styles/mobile/opportunities/mobile.opcar.scss";
+
+// mobile about
+@import "/styles/mobile/about/mobile.abouthero.scss";
+@import "/styles/mobile/about/mobile.aboutstart.scss";
+@import "/styles/mobile/about/mobile.aboutecofirst.scss";
+@import "/styles/mobile/about/mobile.abouteco.scss";
+
+// tablet global
+@import "/styles/tablet/global/tablet.nav.scss";
+@import "/styles/tablet/global/tablet.become.partner.scss";
+@import "/styles/tablet/global/tablet.footer.scss";
+
+// tablet main
+@import "/styles/tablet/main/tablet.main.hero.scss";
+@import "/styles/tablet/main/tablet.main.why.scss";
+@import "/styles/tablet/main/tablet.main.product.scss";
+@import "/styles/tablet/main/tablet.main.form.scss";
+
+// tablet op
+@import "/styles/tablet/opportunities/tablet.ophero.scss";
+@import "/styles/tablet/opportunities/tablet.opstart.scss";
+@import "/styles/tablet/opportunities/tablet.opsecond.scss";
+@import "/styles/tablet/opportunities/tablet.optravel.scss";
+@import "/styles/tablet/opportunities/tablet.opcar.scss";
+
+// tablet about
+@import "/styles/tablet/about/tablet.abouthero.scss";
+@import "/styles/tablet/about/tablet.aboutecofirst.scss";
+@import "/styles/tablet/about/tablet.abouteco.scss";
+@import "/styles/tablet/about/tablet.aboutstart.scss";
+
+// global
+@import "/styles/desktop/global/desktop.nav.scss";
+@import "/styles/desktop/global/desktop.footer.scss";
+@import "/styles/desktop/global/desktop.become.partner.scss";
+
+// main pg
+@import "/styles/desktop/main/desktop.main.hero.scss";
+@import "/styles/desktop/main/desktop.main.why.scss";
+@import "/styles/desktop/main/desktop.main.product.scss";
+@import "/styles/desktop/main/desktop.main.form.scss";
+
+// opportunities pg
+@import "/styles/desktop/opportunities/desktop.ophero.scss";
+@import "/styles/desktop/opportunities/desktop.opstart.scss";
+@import "/styles/desktop/opportunities/desktop.opsecond.scss";
+@import "/styles/desktop/opportunities/desktop.optravel.scss";
+@import "/styles/desktop/opportunities/desktop.opcar.scss";
+
+// about pg
+@import "/styles/desktop/about/desktop.abouthero.scss";
+@import "/styles/desktop/about/desktop.aboutstart.scss";
+@import "/styles/desktop/about/desktop.aboutecofirst.scss";
+@import "/styles/desktop/about/desktop.abouteco.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: $buttoncolor;
+    border-radius: 5px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: grey;
+}

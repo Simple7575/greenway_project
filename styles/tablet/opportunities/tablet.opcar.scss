@@ -1,0 +1,62 @@
+@media only screen and (min-width: $tabletstart) and (max-width: $tabletend) {
+    .opcar {
+        position: relative;
+        z-index: -2;
+        height: 52rem;
+        font-family: $raleway;
+        padding: 4em;
+        background-color: black;
+        color: rgb(54, 54, 54);
+
+        .opcar__img {
+            z-index: -1;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("/img/opportunitiespg/binara-weerasinghe-dikgfeEc2nE-unsplash.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position-x: -200px;
+        }
+
+        .opcar__container {
+            // display: grid;
+            // grid-template-columns: 1fr;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.397);
+            backdrop-filter: blur(3px);
+
+            height: 100%;
+
+            .opcar__content {
+                padding: 1em 2em;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+
+                h2 {
+                    text-align: center;
+                    font-weight: normal;
+                    font-size: 3rem;
+                }
+
+                h5 {
+                    font-size: 1.5rem;
+                }
+
+                p {
+                    font-size: 1.1rem;
+                }
+
+                h5,
+                p {
+                    margin-top: 0.7rem;
+                }
+            }
+        }
+    }
+}

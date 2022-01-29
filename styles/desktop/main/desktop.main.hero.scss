@@ -1,0 +1,127 @@
+@media only screen and (min-width: $desktop) {
+    .mainhero {
+        .hero__wrapper {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            padding: 5rem 5em;
+            margin-top: 4rem;
+            display: flex;
+            align-items: center;
+
+            .hero__img {
+                position: absolute;
+                z-index: -10;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: url("../../../public/img/mainpg/lawrence-kayku-ZVKr8wADhpc-unsplash.jpg");
+                background-size: cover;
+            }
+
+            .hero__inner__wrapper {
+                height: 100%;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                justify-content: center;
+                align-items: center;
+
+                .hero__content__contacts__wrapper {
+                    display: flex;
+                    justify-content: center;
+
+                    .hero__content__contacts__inner {
+                        padding: 0 3em;
+                        display: flex;
+                        flex-direction: column;
+                        max-width: 35rem;
+
+                        .hero__contacts {
+                            padding: 10px 20px;
+                            background-color: $herocontactsbc;
+                            backdrop-filter: blur(2px);
+                            max-width: max-content;
+
+                            .hero__contacts__icons {
+                                a img {
+                                    margin: 0 0.3em;
+                                    width: 1.7em;
+                                    transition: all 100ms linear;
+
+                                    &:hover {
+                                        transform: scale(1.1);
+                                        filter: drop-shadow(
+                                            -3px 5px 0px rgb(114, 114, 114)
+                                        );
+                                    }
+                                }
+                            }
+
+                            .hero__contacts__number {
+                                a {
+                                    margin: 0 0.3em;
+                                    font-size: 0.9em;
+                                    text-decoration: none;
+                                    color: $navlinks;
+
+                                    &:hover {
+                                        color: $navlinkshover;
+                                    }
+                                }
+                            }
+                        }
+
+                        .hero__content {
+                            display: flex;
+                            flex-direction: column;
+                            margin-top: 15%;
+                            font-family: $raleway;
+
+                            h2 {
+                                font-weight: 200;
+                                color: white;
+                                font-size: 3.5em;
+                                line-height: 0.9em;
+                                margin-bottom: 0.5em;
+                            }
+
+                            p {
+                                color: white;
+                                width: 45ch;
+                            }
+
+                            button {
+                                align-self: flex-start;
+                                border: none;
+                                border-radius: 50px;
+                                margin-top: 3em;
+                                background-color: $buttoncolor;
+                                width: 10em;
+                                height: 3em;
+                                cursor: pointer;
+                                transition: all 100ms linear;
+
+                                &:hover {
+                                    color: white;
+                                    background-color: $buttonhover;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .hero__logo {
+                    display: flex;
+                    justify-content: center;
+
+                    picture {
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

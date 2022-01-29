@@ -1,0 +1,100 @@
+@media only screen and (min-width: $desktop) {
+    .mainwhy {
+        padding: 3em 5em;
+        background-color: $bodygreen;
+        font-family: $raleway;
+
+        h1 {
+            font-size: 4em;
+            font-weight: 700;
+            color: $whytextcolor;
+            text-align: center;
+
+            strong {
+                font-weight: 900;
+            }
+        }
+
+        .main__why__container {
+            margin-top: 3em;
+
+            .main__why__headline {
+                padding: 15px 67px;
+                background-color: $whyheadlinebc;
+                max-width: 50%;
+
+                h2 {
+                    max-width: 12ch;
+                    font-size: 2.3em;
+                    color: $whytextcolor;
+                }
+            }
+
+            .main__why__inner__wrapper {
+                color: $whytextcolor;
+                padding: 2em 0;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+
+                .main__why__inner__container {
+                    margin-bottom: 3em;
+                    display: flex;
+                    align-items: center;
+
+                    h3 {
+                        font-size: 1.7em;
+                        margin-bottom: 0.5em;
+                    }
+
+                    p {
+                        max-width: 50ch;
+                        font-weight: 300;
+                    }
+
+                    // img {
+                    //     margin-right: 15px;
+                    //     width: 57px;
+                    //     height: 57px;
+                    // }
+
+                    svg {
+                        margin-right: 15px;
+                        width: 57px;
+                        height: 57px;
+
+                        path {
+                            fill: $bodygreen;
+                        }
+                    }
+                }
+
+                .main__why__inner__link {
+                    grid-column: 2;
+                    display: flex;
+                    align-items: center;
+                    padding-left: 67px;
+
+                    span {
+                        cursor: pointer;
+                        font-weight: 700;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        &:hover img {
+                            transform: translateX(5px);
+                        }
+                    }
+
+                    span img {
+                        margin-left: 3px;
+                        padding-bottom: 2px;
+                        width: 11px;
+                        height: auto;
+                        transition: all 100ms linear;
+                    }
+                }
+            }
+        }
+    }
+}

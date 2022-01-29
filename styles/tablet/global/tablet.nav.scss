@@ -1,0 +1,162 @@
+@media only screen and (min-width: $tabletstart) and (max-width: $tabletend) {
+    #nav {
+        position: relative;
+        z-index: 100;
+        position: fixed;
+        height: 4rem;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: $darkgreen;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5em 2em;
+
+        a {
+            text-decoration: none;
+            color: $navlinks;
+            transition: all 100ms linear;
+
+            &:hover {
+                color: $navlinkshover;
+            }
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .logo {
+            text-shadow: -5px 6px 7px black;
+            transition: all 100ms linear;
+
+            a {
+                font-size: 2.5em;
+                font-family: "Great Vibes", cursive;
+            }
+
+            &:hover {
+                transform: translateX(10px) scale(1.1);
+                text-shadow: -5px 6px 10px black;
+            }
+        }
+
+        .nav__pages,
+        .become__partner__wrapper {
+            display: none;
+        }
+
+        .mobile__nav {
+            z-index: 999;
+            position: absolute;
+            width: max-content;
+            height: max-content;
+            top: 0rem;
+            right: 0;
+            background-color: #29e373b2;
+            backdrop-filter: blur(5px);
+            padding: 1em;
+            transition: all 300ms linear;
+            transform-origin: top;
+
+            transform: scaleY(0);
+            opacity: 0;
+
+            &.open {
+                transform: scaleY(1);
+                opacity: 1;
+            }
+
+            .mobile__nav__close {
+                display: flex;
+                justify-content: flex-end;
+
+                svg {
+                    width: 32px;
+                    aspect-ratio: 1 / 1;
+
+                    path {
+                        fill: $navlinks;
+                    }
+                }
+            }
+
+            .mobile__nav__pages {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                li {
+                    padding-left: 0.2rem;
+                    border-left: 3px solid $navlinks;
+                    margin: 1rem 0;
+                    transition: all 200ms linear;
+                    transition-delay: 300ms;
+                    transform-origin: left;
+                    transform: scaleX(0);
+                    opacity: 0;
+
+                    &.open {
+                        transform: scaleX(1);
+                        opacity: 1;
+                    }
+                }
+
+                a {
+                    font-size: 1.3rem;
+                    font-family: $raleway;
+                    font-weight: bold;
+                }
+
+                button {
+                    all: unset;
+                    font-size: 1.3rem;
+                    font-family: $raleway;
+                    font-weight: bold;
+                    color: $navlinks;
+                }
+            }
+
+            .mobile__become__partner__wrapper {
+                margin-top: 2rem;
+                padding: 1em;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 5px;
+                // background-color: rgba(255, 217, 1, 0.993);
+                background: linear-gradient(
+                    0deg,
+                    rgba(34, 195, 93, 1) 0%,
+                    rgba(235, 219, 186, 0.575) 100%
+                );
+
+                button {
+                    display: flex;
+                    align-items: center;
+                    background: transparent;
+                    border: none;
+                    cursor: pointer;
+                    color: $navlinks;
+                    font-size: 1.2rem;
+                    font-weight: bolder;
+
+                    &:hover {
+                        color: $navlinkshover;
+                    }
+
+                    &:hover img {
+                        transform: translateX(5px);
+                    }
+
+                    img {
+                        width: 11px;
+                        margin-left: 3px;
+                        transition: all 100ms linear;
+                    }
+                }
+            }
+        }
+    }
+}

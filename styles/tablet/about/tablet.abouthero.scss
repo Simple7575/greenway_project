@@ -1,0 +1,40 @@
+@media only screen and (min-width: $tabletstart) and (max-width: $tabletend) {
+    .abouthero {
+        margin-top: 4rem;
+        width: 100%;
+        position: relative;
+        height: 135px;
+        display: flex;
+        justify-content: center;
+
+        .abouthero__img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("/img/mainpg/lawrence-kayku-ZVKr8wADhpc-unsplash.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: -1;
+        }
+
+        .abouthero__headline {
+            width: max-content;
+            height: 100%;
+            background-color: $opheroheadlinebc;
+            backdrop-filter: blur(5px);
+
+            display: flex;
+            align-items: center;
+            padding: 0 3rem;
+            font-family: $raleway;
+            color: white;
+
+            h1 {
+                font-weight: 700;
+                font-size: 3rem;
+            }
+        }
+    }
+}
