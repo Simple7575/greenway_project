@@ -3,6 +3,7 @@
         position: relative;
         height: 40rem;
         padding: 0 5em;
+        overflow: hidden;
 
         .aboutecofirst__img {
             z-index: -1;
@@ -39,6 +40,21 @@
 
                 p {
                     margin-top: 1rem;
+                }
+
+                h3,
+                p {
+                    transform: translateX(-100%);
+                    opacity: 0;
+                    transition: all 500ms linear;
+                }
+
+                &.appear {
+                    h3,
+                    p {
+                        transform: translateX(0);
+                        opacity: 1;
+                    }
                 }
             }
         }

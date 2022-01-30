@@ -6,6 +6,7 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
+        "export": "next build && next export",
         "sync": "browser-sync start -p 'http://localhost:3000' --files '.next'",
         "lint": "next lint"
     },

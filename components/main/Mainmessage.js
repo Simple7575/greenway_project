@@ -29,7 +29,7 @@ export default function Mainmessage() {
                 <h2>Напишите Нам</h2>
             </div>
             <div className="main__message__form__wrapper">
-                <form action="">
+                <form name="Message" action="POST" data-netlify="true">
                     <div className="main__form__name">
                         <label htmlFor="name">Имя</label>
                         <input id="name" type="text" />

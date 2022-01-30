@@ -54,7 +54,11 @@ export default function BecomePartner({ openPartner, setOpenPartner }) {
                         </p>
                     </div>
                     <div className="become__partner__form__container">
-                        <form action="">
+                        <form
+                            name="BecomePartner"
+                            action="POST"
+                            data-netlify="true"
+                        >
                             <div className="become__partner__form__name">
                                 <label htmlFor="name">Имя</label>
                                 <input id="name" type="text" />

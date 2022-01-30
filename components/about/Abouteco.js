@@ -1,6 +1,33 @@
-import React from "react";
+import { useEffect, useRef, useMemo, useState } from "react";
 
 export default function Abouteco() {
+    const targetContainer = useRef();
+    const [imgClassname, setImgClassname] = useState(null);
+
+    const options = useMemo(() => {
+        return {
+            root: null,
+            threshold: 0.1,
+            rootMargin: "-70px 100px",
+        };
+    }, []);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries, observer) => {
+            if (entries[0].isIntersecting) {
+                entries.forEach((item) => {
+                    item.target.classList.add("appear");
+                });
+                setImgClassname("abouteco__img");
+                observer.unobserve(targetContainer.current.children[1]);
+            }
+        }, options);
+
+        for (let i = 0; i < targetContainer.current.children.length; i++) {
+            observer.observe(targetContainer.current.children[i]);
+        }
+    }, []);
+
     return (
         <div className="abouteco">
             <div className="abouteco__container">
@@ -14,8 +41,11 @@ export default function Abouteco() {
                     </h4>
                 </div>
                 <div className="abouteco__img__content__container">
-                    <div className="abouteco__img"></div>
-                    <div className="abouteco__content__container">
+                    <div className={imgClassname}></div>
+                    <div
+                        className="abouteco__content__container"
+                        ref={targetContainer}
+                    >
                         <div className="abouteco__content__item1">
                             <div>
                                 <h3>Мастерство</h3>

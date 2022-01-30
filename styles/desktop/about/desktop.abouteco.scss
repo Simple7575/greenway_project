@@ -1,5 +1,7 @@
 @media only screen and (min-width: $desktop) {
     .abouteco {
+        overflow: hidden;
+
         .abouteco__container {
             .abouteco__headline {
                 padding: 3em 0;
@@ -53,6 +55,24 @@
                         flex-direction: column;
                         justify-content: center;
                         align-items: center;
+                        transition: all 500ms linear;
+
+                        &.appear {
+                            transform: translateX(0);
+                            opacity: 1;
+                        }
+                    }
+
+                    .abouteco__content__item1,
+                    .abouteco__content__item3 {
+                        transform: translateX(-100%);
+                        opacity: 0;
+                    }
+
+                    .abouteco__content__item2,
+                    .abouteco__content__item4 {
+                        transform: translateX(100%);
+                        opacity: 0;
                     }
 
                     h3 {

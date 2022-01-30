@@ -94,19 +94,19 @@ export default function Mainproduct() {
                         <img
                             className={`main__product__img ${productImgAppear}`}
                             loading="lazy"
-                            src="/img/mainpg/green_fiber_main_2c8Xa1V.png"
+                            src="/img/mainpg/green_fiber_main_2c8Xa1V.jpg"
                             alt=""
                         />
                         <img
                             className={`main__product__img ${productImgAppear}`}
                             loading="lazy"
-                            src="/img/mainpg/sharme_minerals_main_sLihVWU.png"
+                            src="/img/mainpg/sharme_minerals_main_sLihVWU.jpg"
                             alt=""
                         />
                         <img
                             className={`main__product__img ${productImgAppear}`}
                             loading="lazy"
-                            src="/img/mainpg/welllab_main_HDoqAWP.png"
+                            src="/img/mainpg/welllab_main_HDoqAWP.jpg"
                             alt=""
                         />
                         <img

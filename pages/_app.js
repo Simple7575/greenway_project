@@ -3,7 +3,7 @@ import Nav from "../components/global/Nav.js";
 import Head from "next/head";
 import Footer from "../components/global/Footer";
 import BecomePartner from "../components/global/BecomePartner";
-import { useState } from "react/cjs/react.development";
+import { useState } from "react";
 
 function MyApp({ Component, pageProps }) {
     const [openPartner, setOpenPartner] = useState(null);
