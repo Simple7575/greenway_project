@@ -56,7 +56,7 @@ export default function BecomePartner({ openPartner, setOpenPartner }) {
                     <div className="become__partner__form__container">
                         <form
                             name="BecomePartner"
-                            action="POST"
+                            method="POST"
                             data-netlify="true"
                         >
                             <div className="become__partner__form__name">
